@@ -6,64 +6,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      value: 'Type Something',
-      style: {
-        backgroundColor: 'orangered',
-        padding: '16px',
-        cursor: 'pointer',
-        color: '#fff'
-      }
+      value: 'Type Something'
     }
   }
-
-
-
-  changeHandler(event, value) {
-    console.log(event);
-    this.setState({ 'value': event.target.value })
-
-  }
-
-
-
-  clickHandler(event) {
-    console.log(event);
-    this.setState({
-      style: {
-        backgroundColor: 'salmon',
-        padding: '16px',
-        transform: 'scale(2)',
-        color: '#fff',
-        fontSize: '20px'
-      }
-    })
-  }
-
-  mouseOverHandler(event) {
-    this.setState({
-      style: {
-        backgroundColor: 'salmon',
-        padding: '16px',
-        color: '#fff',
-        cursor: 'pointer',
-        transform: 'scale(2)',
-        marginBottom: '26px',
-        fontSize: '20px',
-        transition: 'all .5s'
-      }
-    })
-  }
-
-  mouseLeaveHandler(event) {
-    this.setState({
-      style: {
-        backgroundColor: 'orangered',
-        padding: '16px',
-        transition: 'all .5s'
-      }
-    })
-  }
-
 
 
   render() {
@@ -75,32 +20,18 @@ class App extends Component {
         <hr/>
         <br/>
 
-        <ShowMany count={3} />
-
-        <br/>
-        <hr/>
-        <br/>
-
-        {getTestArray(5).map(element => {
-          return (<div>{element}</div>)
-        })}
-
-        <br/>
-        <hr/>
-        <br/>
-
         <div>
-          <input
-            onClick={this.clickHandler.bind(this)}
-            onChange={this.changeHandler.bind(this)}
-            onMouseOver={this.mouseOverHandler.bind(this)}
-            onMouseLeave={this.mouseLeaveHandler.bind(this)}
-            value={this.state.value}
-            style={this.state.style} />
-        </div>
+          <form action="App.js" className="form">
+            <input type="text" placeholder="Username" className="formInput"/>
+            <input type="text" placeholder="Name"/>
+            <input type="text" placeholder="Last Name"/>
+            <input type="email" placeholder="Email"/>
+            <label htmlFor="comment">Leave a Comment</label>
+            <textarea name="comment" id="" cols="" rows="">
 
-        <div>
-          {this.state.value}
+            </textarea>
+
+          </form>
         </div>
 
       </div>

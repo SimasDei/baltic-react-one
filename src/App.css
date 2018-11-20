@@ -22,6 +22,28 @@
   color: #61dafb;
 }
 
+.form input {
+  display: block;
+  margin: 16px auto;
+  width: 33%;
+  height: 28px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 16px;
+}
+
+.form label {
+  display: block;
+  margin: 16px auto;
+  width: 33%;
+}
+
+.form textarea {
+  display: block;
+  margin: 16px auto;
+  height: 200px;
+  width: 33%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
