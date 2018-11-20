@@ -71,23 +71,23 @@ class App extends Component {
     return (
       <div className="App">
 
-        <br></br>
-        <hr></hr>
-        <br></br>
+        <br/>
+        <hr/>
+        <br/>
 
         <ShowMany count={3} />
 
-        <br></br>
-        <hr></hr>
-        <br></br>
+        <br/>
+        <hr/>
+        <br/>
 
         {getTestArray(5).map(element => {
           return (<div>{element}</div>)
         })}
 
-        <br></br>
-        <hr></hr>
-        <br></br>
+        <br/>
+        <hr/>
+        <br/>
 
         <div>
           <input
